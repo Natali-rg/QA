@@ -1,0 +1,93 @@
+form{
+    width: 650px;
+    background: lightgrey;
+    border: 1px solid dodgerblue;
+    margin: 10px auto;
+    padding: 15px;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    border-radius: 5px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+h2>span{
+    color: red;
+    font-size: 12px;
+    margin-left: 100px;
+}
+li{
+    padding: 10px;
+    border-bottom: 1px solid darkslateblue;
+    display: flex;
+}
+input{
+    border-radius: 5px;
+    padding: 5px;
+}
+input:focus{
+    padding-right: 50px;
+    transition: 1s;
+}
+
+form ul li input[type*='submit'] {
+    background-image: none;
+    background: darkslateblue;
+    color: white;
+}
+input:required{
+    background: url("../img/required (1).png") white no-repeat 96% 50%;
+}
+input:valid{
+    background: url("../img/yes (1).png") white no-repeat 96% 50%;
+    border: 1px solid green;
+}
+input:focus:invalid{
+    background: url("../img/no (1).png") white no-repeat 96% 50%;
+    border: 1px solid red;
+}
+label{
+    width: 250px;
+    display: inline-block;
+}
+.form_hint{
+    display: none;
+    padding: 5px;
+    font-size: 12px;
+    font-style: italic;
+    color: white;
+    width: 200px;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 10px;
+}
+.form_hint:before{
+    content: "\25C0";
+    color: #D4524F;
+    position: absolute;
+    top: 5px;
+    left: -8px;
+}
+input:focus:invalid+.form_hint{
+    background: #D4524F;
+    display: block;
+}
+input:focus:valid+.form_hint{
+    background: green;
+    display: block;
+}
+input:focus:valid+.form_hint:before{
+    content: "\25C0";
+    color: green;
+    position: absolute;
+    top: 5px;
+    left: -8px;
+}
+li input[type*='submit']{
+    position: center;
+    margin-left: 255px;
+}
+
+
+
+

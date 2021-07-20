@@ -1,0 +1,78 @@
+#anim{
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #069;
+    background: url(../img/city2.png) repeat-x 0 100%;
+    background-size: 100%;
+    animation: city 7s linear;
+}
+@keyframes city {
+    from{background-position: 1000px,100%, 0, 0;}
+    to{background-position: 0, 100%, 0, 0;}
+}
+#carr{
+    transform: translate(40px,180px);
+    position: relative;
+    z-index: 1;
+    animation: go 7s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes go {
+    0% {transform: translate(40px, 180px);}
+    100% {transform: translate(800px, 180px);}
+}
+#kol,#kol2{
+    position: absolute;
+    z-index: 2;
+}
+#kol{
+    transform: translate(20px,-26px);
+    animation: kryg1 7s linear;
+}
+#kol2{
+    transform: translate(150px,-29px);
+    animation: kryg2 7s linear;
+}
+@keyframes kryg1  {
+    0% {transform:translate(20px,-26px) rotate(1turn);}
+    100% {transform:translate(20px,-26px) rotate(10turn);}
+}
+@keyframes kryg2  {
+    0% {transform:translate(150px,-29px) rotate(1turn);}
+    100% {transform:translate(150px,-29px) rotate(10turn);}
+}
+#gaz2{
+    transform: translate(-5px,-45px);
+    animation: smoke2 7s linear;
+}
+#gaz{
+    transform: translate(-35px,-35px);
+    animation: smoke1 7s linear;
+}
+@keyframes smoke2 {
+    0% {opacity: 1;
+        transform: translate(-5px,-45px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translate(-150px,-150px);
+    }
+    100% {
+        transform: translate(-350px,-350px);
+        opacity: 0;}
+}
+@keyframes smoke1 {
+    0% {opacity: 1;
+        transform: translate(-35px,-35px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translate(-150px,-150px);
+    }
+    100% {
+        transform: translate(-350px,-350px);
+        opacity: 0;}
+}
+
